@@ -26,8 +26,6 @@ const Form = () => {
             // navigate("/login");
         }
     }, [isAuthenticated]); // Fix: Correct dependency array syntax
-};
-
 
 
     //////////////////---------- ADD blog ----//////////////////////////////
@@ -191,5 +189,5 @@ const Form = () => {
         </>
     )
 }
-
+};
 export default Form
