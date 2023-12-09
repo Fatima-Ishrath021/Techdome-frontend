@@ -15,17 +15,19 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Form = () => {
-
-//    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const { isAuthenticated, user } = useSelector(state => state.user);
- //   useEffect(() => {
+
+    useEffect(() => {
         const token = localStorage.getItem("userToken");
         if (!token) {
-      //      navigate("/login");
+            // navigate("/login");
         }
-    }, [isAuthenticated];
+    }, [isAuthenticated]); // Fix: Correct dependency array syntax
+};
+
 
 
     //////////////////---------- ADD blog ----//////////////////////////////
