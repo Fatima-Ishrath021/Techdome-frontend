@@ -23,9 +23,9 @@ const Form = () => {
  //   useEffect(() => {
         const token = localStorage.getItem("userToken");
         if (!token) {
-            navigate("/login");
+      //      navigate("/login");
         }
-    }, [isAuthenticated]);//
+    }, [isAuthenticated];
 
 
     //////////////////---------- ADD blog ----//////////////////////////////
