@@ -25,6 +25,9 @@ jobs:
       - name: Installing NPM packages
         run: npm ci
 
+      - name: updating browserlist
+        run: npx update-browserslist-db@latest
+        
       - name: Building project
         run: npm run build
 
