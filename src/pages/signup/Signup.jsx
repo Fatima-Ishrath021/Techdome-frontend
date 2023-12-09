@@ -49,7 +49,7 @@ const Signup = () => {
     useEffect(() => {
         const token = localStorage.getItem("userToken");
         if (token) {
-            navigate("/");
+         //   navigate("/");
         }
     }, [isAuthenticated]);
 
