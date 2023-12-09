@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./form.scss"
 import NavBar from '../../components/navbar/NavBar'
 import { Button } from '@mui/material'
-import img from "../../assests/img2.png"
+//import img from "../../assests/img2.png"
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { addBlog, deleteBlog, getBlogs, updateBlog } from '../../actions/blogAction'
@@ -16,16 +16,16 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
 
-    const navigate = useNavigate();
+//    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const { isAuthenticated, user } = useSelector(state => state.user);
-    useEffect(() => {
+ //   useEffect(() => {
         const token = localStorage.getItem("userToken");
         if (!token) {
             navigate("/login");
         }
-    }, [isAuthenticated]);
+    }, [isAuthenticated]);//
 
 
     //////////////////---------- ADD blog ----//////////////////////////////
@@ -38,10 +38,10 @@ const Form = () => {
     });
 
     useEffect(() => {
-        if (user) {
+      //  if (user) {
             setBlog({ ...blog, "user_id": user._id });
         }
-    }, [user]);
+    }, [user]); //
 
     const handleChange = (e) => {
         setBlog({ ...blog, [e.target.name]: e.target.value });
@@ -65,8 +65,8 @@ const Form = () => {
     const { isloading, blogs } = useSelector(state => state.blogReducer);
 
     useEffect(() => {
-        dispatch(getBlogs());
-    }, []);
+       // dispatch(getBlogs());
+    }, []);//
 
     useEffect(() => {
         if (blogs) {
