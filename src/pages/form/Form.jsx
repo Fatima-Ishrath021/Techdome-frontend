@@ -40,10 +40,11 @@ const Form = () => {
     });
 
     useEffect(() => {
-      //  if (user) {
-            setBlog({ ...blog, "user_id": user._id });
-        }
-    }, [user]); //
+         // if (user) {
+          setBlog({ ...blog, "user_id": user._id });
+       // }
+    }, [user]);
+
 
     const handleChange = (e) => {
         setBlog({ ...blog, [e.target.name]: e.target.value });
