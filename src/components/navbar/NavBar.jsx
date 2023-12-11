@@ -52,7 +52,7 @@ const NavBar = () => {
                 </div>
 
                 {show ? <div className='opt'>
-                    {state && <div><Link to="/form"> <Button className={`btt ${location.pathname == "/form" ? "active" : ""}`} variant="contained"> Form </Button> </Link> </div>}
+                    {state && <div><Link to="/form"> <Button className={`btt ${location.pathname === "/form" ? "active" : ""}`} variant="contained"> Form </Button> </Link> </div>}
                     <div><Link to="/"> <Button className={`btt ${location.pathname === "/" ? "active" : ""}`} variant="contained"> Blog</Button> </Link> </div>
                     {!state && <div> <Link to="/signup"> <Button className={`btt ${location.pathname === "/signup" ? "active" : ""}`} variant="contained"> Sign up</Button> </Link> </div>}
                     {!state && <div> <Link to="/login"> <Button className={`btt ${location.pathname === "/login" ? "active" : ""}`} variant="contained"> Login</Button> </Link></div>}
