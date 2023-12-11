@@ -7,14 +7,14 @@ import BlogCard from '../../components/blogCard/BlogCard'
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { useDispatch, useSelector } from 'react-redux'
-import { getBlogs } from '../../actions/blogAction'
+//import { getBlogs } from '../../actions/blogAction'
 import { ThreeCircles } from 'react-loader-spinner'
 
 
 const Blog = () => {
 
     const { isloading, blogs } = useSelector(state => state.blogReducer);
-    const dispatch = useDispatch();
+  //  const dispatch = useDispatch();
 
     const [blogArray, setBlogArray] = useState([]);
 
