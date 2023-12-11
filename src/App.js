@@ -13,8 +13,8 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadUser());
-  }, []);
+    //dispatch(loadUser());
+  }, []);//
 
   return (
     <>
